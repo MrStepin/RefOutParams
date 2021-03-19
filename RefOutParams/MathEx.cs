@@ -22,22 +22,11 @@ namespace RefOutParams
                 return false;
             }
             return true;
-            
-
         }
         public static bool Pow(ref double value)
         {
-            bool result;
-            if (value >= 0)
-            {
-                result = true;
-            }
-            else
-            {
-                result = false;
-            }
             value = Math.Pow(value, 2);
-            return result;
+            return value >= 0;
         }
 
         public static double Sum(params double[] numbers)
